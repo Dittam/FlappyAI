@@ -1,7 +1,7 @@
 # FlappyAI
 Flappy Brid AI implemented using a feed forward neural network and trained using particle swarm optimization.
 <p align="center">
-<img src="https://github.com/Dittam/ChatStats/blob/master/sceenshots/messageDistribution.png" width="800" height="418">
+<img src="https://github.com/Dittam/FlappyAI/blob/master/assets/Title.png" width="358" height="337">
 </p>
 
 
@@ -16,18 +16,34 @@ Flappy Brid AI implemented using a feed forward neural network and trained using
 
 
 ## Neural Network Architecture:
-* 3 layers including 1 hidden layer: 2, 6, 1 neurons respectively per layer
+* 3 layers including 1 hidden layer: 2, 6, 1 neurons respectively
 * layer 1 weight matrix: 2x6,  layer 2 weight matrix: 1x6
-*The network takes input layer takes in 2 inputs; a birds horzontal and verticle distance from the midpoint of the nearest graph. Visualied by the red, green , blue lines when running FlappyBirdGame.py
+* The network takes input layer takes in 2 inputs; a birds horzontal and verticle distance from the midpoint of the nearest graph. Visualied by the red, green , blue lines when running FlappyBirdGame.py
 * The output layer is a 1x1 matrix that outputs a probability between 0,1 on whether or not the bird should flap
 *The activation function used is tanh(x)
 
 <p align="center">
-<img src="https://github.com/Dittam/ChatStats/blob/master/sceenshots/messageDistribution.png" width="356" height="209">
-</p>
+<img src="https://github.com/Dittam/FlappyAI/blob/master/assets/networkDiagram.png" width="356" height="209">
+</p> 
 
 
-##
+## Particle Swarm optimization
+### PSO is a neuro-evolutionary algorithm used to train the weights in each matrix
+is the network
+
+### Formula:
+<p align="left">
+<img src="https://github.com/Dittam/FlappyAI/blob/master/assets/PSOAlgo.png" width="286" height="201">
+</p> 
+
+Note the positions of each particle corresponds to a solution set, i.e. a set of weights for each matrix
+
+
+## The following pseudocode accurately explains PSO:
+<p align="left">
+<img src="https://github.com/Dittam/FlappyAI/blob/master/assets/PSOPsaSeudo.png" width="245" height="244">
+</p> 
+
 
 ## Dependencies:
 * Python 3+
