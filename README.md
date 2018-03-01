@@ -23,17 +23,16 @@ Flappy Brid AI implemented using a feed forward neural network and trained using
 *The activation function used is tanh(x)
 
 <p align="center">
-<img src="https://github.com/Dittam/FlappyAI/blob/master/assets/networkDiagram.png" width="356" height="209">
+<img src="https://github.com/Dittam/FlappyAI/blob/master/assets/networkDiagram.PNG" width="356" height="209">
 </p> 
 
 
 ## Particle Swarm optimization
-### PSO is a neuro-evolutionary algorithm used to train the weights in each matrix
-is the network
+PSO is a neuro-evolutionary algorithm used to train the weights in each matrix is the network
 
 ### Formula:
 <p align="left">
-<img src="https://github.com/Dittam/FlappyAI/blob/master/assets/PSOAlgo.png" width="286" height="201">
+<img src="https://github.com/Dittam/FlappyAI/blob/master/assets/PSOAlgo.PNG" width="286" height="201">
 </p> 
 
 Note the positions of each particle corresponds to a solution set, i.e. a set of weights for each matrix
@@ -41,7 +40,7 @@ Note the positions of each particle corresponds to a solution set, i.e. a set of
 
 ## The following pseudocode accurately explains PSO:
 <p align="left">
-<img src="https://github.com/Dittam/FlappyAI/blob/master/assets/PSOPsaSeudo.png" width="245" height="244">
+<img src="https://github.com/Dittam/FlappyAI/blob/master/assets/PSOPseudo.PNG" width="245" height="244">
 </p> 
 
 
