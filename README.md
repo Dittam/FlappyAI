@@ -22,7 +22,7 @@ Flappy Brid AI implemented using a feed forward neural network and trained using
 * The output layer is a 1x1 matrix that outputs a probability between 0,1 on whether or not the bird should flap
 *The activation function used is tanh(x)
 
-<p align="center">
+<p align="left">
 <img src="https://github.com/Dittam/FlappyAI/blob/master/assets/networkDiagram.PNG" width="356" height="209">
 </p> 
 
