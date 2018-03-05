@@ -49,3 +49,4 @@ Note the positions of each particle corresponds to a solution set, i.e. a set of
 * Pygame
 * Matplotlib
 * Numpy
+* scikit-learn
