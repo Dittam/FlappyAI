@@ -10,7 +10,7 @@ import numpy as np
 
 FPS = 60
 # number of birds per generation
-MODELS = 15
+MODELS = 30
 SCREEN = pygame.display.set_mode((400, 700))  # 400x708
 BACKGROUND = pygame.image.load("assets/backgroundold.png").convert()
 WALL_IMAGE = [pygame.image.load("assets/bottom.png").convert_alpha(),
@@ -154,7 +154,8 @@ class Walls():
 
 
 def paused(clock):
-    # pause function: press 'p' to pause 'c' to continue
+    # pause function: press 'p' to pause 'c' to continue 's' to save current
+    # bird matrix to npz file(only works if theres 1 bird alive)
     paused = True
     while paused:
         for event in pygame.event.get():
@@ -167,6 +168,9 @@ def paused(clock):
                 elif event.key == pygame.K_q:
                     pygame.quit()
                     sys.exit()
+                elif event.key == pygame.K_s:
+                    for i in birdgroup:
+                        i.brain.saveWeightFile()
         pygame.display.update()
         clock.tick(1)
 
@@ -292,7 +296,6 @@ def run():
 
 
 if __name__ == "__main__":
-
     w = Walls(SCREEN)
     # initialize optimizer and birds
     birdgroup = pygame.sprite.Group()
@@ -304,6 +307,7 @@ if __name__ == "__main__":
         # reconstruct and load the initial weights into new birds
         l1w, l1b, l2w, l2b = swarm.particles[i].rebuildWegihtMatrix()
         bird.brain.loadWeightMatrix(l1w, l1b, l2w, l2b)
-        birdgroup.add(Bird(SCREEN, w))
+        # bird.brain.loadWeightFile('test')
+        birdgroup.add(bird)
 
     run()
