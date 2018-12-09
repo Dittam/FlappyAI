@@ -307,8 +307,7 @@ if __name__ == "__main__":
         # reconstruct and load the initial weights into new birds
         l1w, l1b, l2w, l2b = swarm.particles[i].rebuildWegihtMatrix()
         bird.brain.loadWeightMatrix(l1w, l1b, l2w, l2b)
-        # uncomment to load trained model and set MODELS=1
-        # bird.brain.loadWeightFile('Gen12')
+        # bird.brain.loadWeightFile('test')
         birdgroup.add(bird)
 
     run()
